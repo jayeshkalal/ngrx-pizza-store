@@ -13,7 +13,11 @@ Follow the below steps:
  
 
 ## Screens
+* Landing page
+![Screenshot 2022-10-18 002417](https://user-images.githubusercontent.com/48912746/196260914-67a70e66-2348-475c-869a-ac4eec037618.jpg)
 
+* Progress tab
+![Screenshot 2022-10-18 003554](https://user-images.githubusercontent.com/48912746/196261319-636ae138-0b05-4e65-8fef-385931d1fac9.jpg)
 
 
 ## Description
