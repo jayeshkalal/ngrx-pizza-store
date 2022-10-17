@@ -1,0 +1,32 @@
+<div class="column">
+  <h2>{{name}}</h2>
+  <mat-card *ngFor="let order of orders | async">
+    <mat-card-header>
+      <mat-card-title>{{order.name}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="icon-text-container">
+        <mat-icon>person</mat-icon>
+        <span>{{order.customerName}}</span>
+      </div>
+      <div class="icon-text-container">
+        <mat-icon>add</mat-icon>
+        <span>{{order.toppings}}</span>
+      </div>
+      <div class="icon-text-container"
+           *ngIf="order.extraToppings">
+           <mat-icon> comment</mat-icon>
+        <span>Extra toppings requested</span>
+      </div>
+    </mat-card-content>
+
+    <mat-card-actions [align]="'end'"
+                      *ngIf="canChangeStatus">
+      <button mat-mini-fab 
+              (click)="changeOrderStatus(order)">
+        <mat-icon>east</mat-icon>
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

@@ -1,0 +1,34 @@
+/* .example-card {
+    max-width: 400px;
+  }
+  
+  .card-data {
+    max-height: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .imgs {
+    height: 400px;
+    width: 400px;
+  }
+
+  mat-card {
+    padding: 10px;
+    margin: 10px;
+  } */
+
+  mat-toolbar {
+    justify-content: space-between;
+}
+
+.content {
+    padding: 16px;
+    width: 80%;
+    padding-left: 10%;
+}
+
+.content > mat-card {
+    margin-bottom: 16px;
+}

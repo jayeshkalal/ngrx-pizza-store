@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="board" *ngIf="fetched">
+    <app-list-column name="New"
+                     [canChangeStatus]="true"
+                     [orders] = "new"
+                     (changeStatus)="changeOrderStatus($event)"></app-list-column>
+    <app-list-column name="In Progress"
+                     [canChangeStatus]="true"
+                     [orders] = "inProg"
+                     (changeStatus)="changeOrderStatus($event)"></app-list-column>
+    <app-list-column name="Done"
+                     [canChangeStatus]="false"
+                     [orders] = "done"
+                     ></app-list-column>
+  </div>
+
+  <mat-spinner *ngIf="!fetched"></mat-spinner>
+</div>

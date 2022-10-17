@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Dashboard</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <ng-container *ngIf="fetched">
+      <app-dashboard-statistic
+        [label]="'To do'" [value] ="new"></app-dashboard-statistic>
+      <app-dashboard-statistic
+        [label]="'In Progress'" [value]="inProg"></app-dashboard-statistic>
+      <app-dashboard-statistic
+        [label]="'Done'" [value]="done"></app-dashboard-statistic>
+    </ng-container>
+    <mat-spinner *ngIf="!fetched"></mat-spinner>
+  </mat-card-content>
+</mat-card>
+<mat-spinner *ngIf="!fetched"></mat-spinner>
+<app-card-display *ngIf="fetched" [pizzas] = "pizzaList" (newOrder)="placeNewOrder($event)"></app-card-display>
+
+
