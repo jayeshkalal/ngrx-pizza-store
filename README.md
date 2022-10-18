@@ -29,5 +29,4 @@ State management in the application is done using the NgRx library:
 * Data from store can be retrived by this way: `action -> effect -> service -> store by reducer fn`. 
 * Service calls from effects only.
 * Advancing the pizza to the next step (`New` -> `In Progress` -> `Done`).
-* In `car-repairs-dashboard.component.ts`, add:
 * Displaying all oders of pizza in each state.
